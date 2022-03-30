@@ -15,6 +15,10 @@ let port = process.env.PORT || 3000;
 let host = 'localhost';
 app.set('view engine', 'ejs');
 
+app.listen(port, host, () => {
+    console.log("Server is running on port", port);
+});
+
 /**
 //connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/NBAD', { useNewUrlParser: true, useUnifiedTopology: true })
